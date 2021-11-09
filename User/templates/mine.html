@@ -1,0 +1,143 @@
+{%- extends 'base_layout.html' %}
+
+{%- block title %}
+    {{ super() }}-文章详情
+{%- endblock %}
+
+{%- block header %}
+    <link rel="stylesheet" href="/assets/style/mine.css">
+{%- endblock %}
+
+{%- block content %}
+  <!-- // 顶部导航 -->
+  <!-- 顶部个人信息 -->
+  <div class="layout-personal">
+    <div class="container">
+      <div class="main-top">
+        <img src="/assets/home/qa/personal_top.jpg" alt="">
+      </div>
+      <div class="main-bottom">
+        <div class="content-left">
+          <img src="/assets/home/qa/personal_avatar.jpg" alt="">
+        </div>
+        <div class="content-right">
+          <h3>NavCat</h3>
+          <div class="desc">
+            创业是一次孤独的旅行
+          </div>
+          <div class="info-row">
+            <i class="glyphicon glyphicon-folder-close"></i> <span>计算软件</span>
+          </div>
+          <div class="info-row">
+            <i class="glyphicon glyphicon-certificate"></i> <span>男</span>
+          </div>
+          <button class="btn btn-default btn-gray" type="button">编辑个人资料</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // 顶部个人信息 -->
+  <div class="container layout-main">
+    <div class="row">
+      <div class="col-md-9">
+        <!-- 左侧内容区域 -->
+        <div class="main-left">
+          <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#">动态</a></li>
+            <li role="presentation"><a href="#">回答</a></li>
+            <li role="presentation" ><a href="#">收藏</a></li>
+            <li role="presentation" class="active"><a href="#">关注</a></li>
+            <li role="presentation"><a href="#">文章</a></li>
+          </ul>
+          <div class="title">我关注的问题</div>
+          <!-- 我关注的问题列表 -->
+          <ul class="flllow-qa-ls">
+            <li>
+              <a href="../../templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+            <li>
+              <a href="../../templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+            <li>
+              <a href="../../templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+            <li>
+              <a href="../../templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+            <li>
+              <a href="../../templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+            <li>
+              <a href="../../templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2020-3-1 · 15个回答 ·  20个关注</div>
+            </li>
+          </ul>
+          <!-- // 我关注的问题列表 -->
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="上一页">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="下一页">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- //左侧内容区域 -->
+      </div>
+      <div class="col-md-3">
+        <!-- 右侧内容区域 -->
+        <div class="main-right">
+          <!-- 关注统计 -->
+          <div class="follow-stats box-wrap">
+            <div>
+              <span>关注了</span>
+              <strong>12</strong>
+            </div>
+            <div>
+              <span>关注者</span>
+              <strong>12</strong>
+            </div>
+          </div>
+          <!-- // 关注统计 -->
+          <!-- 右侧页脚 -->
+          <div class="right-footer">
+            <a href="#">用户指南</a><span class="dot">·</span>
+            <a href="#">用户使用协议</a><span class="dot">·</span>
+            <a href="#">用户隐私权政策</a>
+            <br/>
+            <a href="#">侵权举报</a><span class="dot">·</span>
+            <a href="#">网上有害信息举报专区</a>
+            <br/>
+            <a href="#">京ICP证 第10001000号</a>
+            <br/>
+            <a href="#">京ICP备 第10001000号</a>
+            <br/>
+            <a href="#">联系我们 &copy; 2020在线问答</a>
+          </div>
+        <!-- //右侧页脚 -->
+        </div>
+        <!-- //右侧内容区域 -->
+      </div>
+    </div>
+  </div>
+{%- endblock %}
+
+{%- block js_inline %}
+    {%- include 'components/r-botton.js' %}
+{%- endblock %}
