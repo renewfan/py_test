@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 # 数据库初始化
 db = SQLAlchemy()
 
+
 # 用户模型
 class User(db.Model):
     """ 用户模型 """
@@ -25,6 +26,7 @@ class User(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.now)
     # 更新时间
     updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now)
+
 
 class UserProfile(db.Model):
     """ 用户的详细信息 """
@@ -48,6 +50,7 @@ class UserProfile(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('accounts_user.id'))
     # 建立用户的一对一关系属性--user.profile  profile.user 相互获取，uselist=False表示一对一关系
     user = db.relationship('User', backref=db.backref('profile', uselist=False))
+
 
 class UserLoginHistory(db.Model):
     """ 登录历史 """
@@ -157,6 +160,7 @@ class Answer(db.Model):
     @property
     def comment_num(self):
         return self.answer_comment_list.count()
+
 
 class AnswerComment(db.Model):
     """ 回答的评论 """
